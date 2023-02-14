@@ -1,1 +1,46 @@
-aaa
+func resolveIpAddress(fromHostname hostname: String) -> String {
+    let components = hostname.split(separator: ":")
+    guard components.count == 2, let port = components.last else {
+        fatalError("Invalid hostname format: \(hostname)")
+    }
+    let hostname = String(components.first!)
+    
+    var hints = addrinfo()
+    hints.ai_family = AF_INET
+    hints.ai_socktype = SOCK_STREAM
+    
+    var result: UnsafeMutablePointer<addrinfo>?
+    let status = getaddrinfo(hostname, port, &hints, &result)
+    
+    guard status == 0, let res = result else {
+        fatalError("Failed to resolve address for \(hostname):\(port)")
+    }
+    
+    let ipAddress = String(cString: inet_ntoa((res.pointee.ai_addr as! sockaddr_in).sin_addr))
+    let newString = "\(ipAddress):\(port)"
+    
+    freeaddrinfo(result)
+    return newString
+}
+
+let inputs = [
+    "www.example.com:8080",
+    "localhost:3000",
+    "127.0.0.1:8080",
+    "172.16.0.1:80",
+    "2001:0db8:85a3:0000:0000:8a2e:0370:7334:8080",
+    "[2001:0db8:85a3:0000:0000:8a2e:0370:7334]:8080",
+    "example.com:65535",
+    "example.com:65536",
+    "example.com",
+    "example:com:80"
+]
+
+for input in inputs {
+    do {
+        let ipAddress = try resolveIpAddress(from: input)
+        print("\(input) -> \(ipAddress)")
+    } catch {
+        print("\(input) -> Error: \(error)")
+    }
+}
