@@ -80,3 +80,32 @@ func resolveHostname(_ hostname: String) -> [String]? {
 
     return addrStrings
 }
+
+import Foundation
+import CoreFoundation
+
+let hostName = "www.apple.com"
+var addrInfo: UnsafeMutablePointer<CFArray?>?
+
+let host = CFHostCreateWithName(nil, hostName as CFString)
+if CFHostStartInfoResolution(host, .addresses, nil) {
+    addrInfo = CFHostGetAddressing(host, nil)!
+}
+
+if let addresses = addrInfo?.pointee as? [Data] {
+    for address in addresses {
+        var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+        let saLen = socklen_t(MemoryLayout<sockaddr>.size)
+        let result = address.withUnsafeBytes { (rawAddress) -> Int32 in
+            getnameinfo(rawAddress.bindMemory(to: sockaddr.self).baseAddress, saLen,
+                        &hostname, socklen_t(hostname.count), nil, 0, NI_NUMERICHOST)
+        }
+        if result == 0 {
+            if let addressStr = String(validatingUTF8: hostname) {
+                print("IP address: \(addressStr)")
+            }
+        } else {
+            print("Could not convert address to string")
+        }
+    }
+}
