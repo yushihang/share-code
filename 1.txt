@@ -44,3 +44,39 @@ for input in inputs {
         print("\(input) -> Error: \(error)")
     }
 }
+
+func resolveHostname(_ hostname: String) -> [String]? {
+    var hints = addrinfo()
+    hints.ai_family = AF_UNSPEC
+    hints.ai_socktype = SOCK_STREAM
+
+    var res: UnsafeMutablePointer<addrinfo>?
+    let status = getaddrinfo(hostname, nil, &hints, &res)
+    guard status == 0 else {
+        return nil
+    }
+    defer {
+        freeaddrinfo(res)
+    }
+
+    var addrStrings = [String]()
+    var ptr = res
+    while ptr != nil {
+        let flags = Int32(NI_NUMERICHOST)
+        var addr = UnsafeMutablePointer<Int8>.allocate(capacity: Int(NI_MAXHOST))
+        defer {
+            addr.deallocate()
+        }
+
+        let gaiStatus = getnameinfo(ptr!.ai_addr, socklen_t(ptr!.ai_addrlen),
+                                    addr, socklen_t(NI_MAXHOST), nil, 0, flags)
+        if gaiStatus != 0 {
+            return nil
+        }
+        addrStrings.append(String(cString: addr))
+
+        ptr = ptr!.ai_next
+    }
+
+    return addrStrings
+}
