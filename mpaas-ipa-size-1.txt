@@ -1,0 +1,49 @@
+❯ unzip -v HSBCOpen.ipa
+Archive:  HSBCOpen.ipa
+ Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
+--------  ------  ------- ---- ---------- ----- --------  ----
+       0  Stored        0   0% 03-03-2023 15:57 00000000  Payload/
+       0  Stored        0   0% 03-03-2023 15:57 00000000  Payload/HSBCOpen.app/
+  310148  Defl:N   132016  57% 03-03-2023 15:49 1ec2e770  Payload/HSBCOpen.app/SFProText-Regular.otf
+       0  Stored        0   0% 03-03-2023 15:49 00000000  Payload/HSBCOpen.app/_CodeSignature/
+    8911  Defl:N     2643  70% 03-03-2023 15:57 f4ec7da2  Payload/HSBCOpen.app/_CodeSignature/CodeResources
+  335512  Defl:N   140683  58% 03-03-2023 15:49 0ab32cec  Payload/HSBCOpen.app/SFProDisplay-Medium.otf
+  329540  Defl:N   145739  56% 03-03-2023 15:49 ab81b990  Payload/HSBCOpen.app/SFProText-Light.otf
+    1285  Defl:N      442  66% 03-03-2023 15:49 755f0420  Payload/HSBCOpen.app/QuestionData.json
+  954807  Defl:N   951409   0% 03-03-2023 15:49 5c05e7e5  Payload/HSBCOpen.app/Campaign Introduction Page-kv.gif
+     812  Defl:N      309  62% 03-03-2023 15:49 1db283b8  Payload/HSBCOpen.app/QA.json
+    5572  Defl:N     5550   0% 03-03-2023 15:49 b0dcd3e8  Payload/HSBCOpen.app/AppIcon60x60@2x.png
+   21505  Defl:N     3935  82% 03-03-2023 15:49 7bccf9b9  Payload/HSBCOpen.app/CountryCodes.json
+    1490  Defl:N      359  76% 03-03-2023 15:49 b4f8a009  Payload/HSBCOpen.app/ItemsData.json
+  342732  Defl:N   146783  57% 03-03-2023 15:49 e0d70e58  Payload/HSBCOpen.app/SFProText-Medium.otf
+ 2654592  Defl:N  1046273  61% 03-03-2023 15:57 c7983728  Payload/HSBCOpen.app/HSBCOpen
+24368544  Defl:N 23597167   3% 03-03-2023 15:49 3648e093  Payload/HSBCOpen.app/Assets.car
+  334728  Defl:N   138688  59% 03-03-2023 15:49 53ccc7b0  Payload/HSBCOpen.app/SFProDisplay-Bold.otf
+  341844  Defl:N   144027  58% 03-03-2023 15:49 f9ae23ac  Payload/HSBCOpen.app/SFProText-Bold.otf
+  631061  Defl:N   628573   0% 03-03-2023 15:49 c79528cb  Payload/HSBCOpen.app/Campaign Introduction Page-nft.gif
+    1424  Defl:N     1273  11% 03-03-2023 15:49 a672f519  Payload/HSBCOpen.app/openharbour1865.cer
+       0  Stored        0   0% 03-03-2023 15:49 00000000  Payload/HSBCOpen.app/Frameworks/
+       0  Stored        0   0% 03-03-2023 15:57 00000000  Payload/HSBCOpen.app/Frameworks/ZipArchive.framework/
+       0  Stored        0   0% 03-03-2023 15:49 00000000  Payload/HSBCOpen.app/Frameworks/ZipArchive.framework/_CodeSignature/
+    1798  Defl:N      420  77% 03-03-2023 15:57 ce139c20  Payload/HSBCOpen.app/Frameworks/ZipArchive.framework/_CodeSignature/CodeResources
+  193952  Defl:N    59851  69% 03-03-2023 15:57 1315d99a  Payload/HSBCOpen.app/Frameworks/ZipArchive.framework/ZipArchive
+     790  Defl:N      565  29% 03-03-2023 15:49 6e92e53a  Payload/HSBCOpen.app/Frameworks/ZipArchive.framework/Info.plist
+       0  Stored        0   0% 03-03-2023 15:57 00000000  Payload/HSBCOpen.app/Frameworks/Kingfisher.framework/
+       0  Stored        0   0% 03-03-2023 15:49 00000000  Payload/HSBCOpen.app/Frameworks/Kingfisher.framework/_CodeSignature/
+    1798  Defl:N      421  77% 03-03-2023 15:57 46ef8edb  Payload/HSBCOpen.app/Frameworks/Kingfisher.framework/_CodeSignature/CodeResources
+ 1063824  Defl:N   402305  62% 03-03-2023 15:57 83e3318a  Payload/HSBCOpen.app/Frameworks/Kingfisher.framework/Kingfisher
+     791  Defl:N      566  28% 03-03-2023 15:49 79964d18  Payload/HSBCOpen.app/Frameworks/Kingfisher.framework/Info.plist
+       0  Stored        0   0% 03-03-2023 15:57 00000000  Payload/HSBCOpen.app/Frameworks/Alamofire.framework/
+       0  Stored        0   0% 03-03-2023 15:49 00000000  Payload/HSBCOpen.app/Frameworks/Alamofire.framework/_CodeSignature/
+    1798  Defl:N      422  77% 03-03-2023 15:57 a3764b8a  Payload/HSBCOpen.app/Frameworks/Alamofire.framework/_CodeSignature/CodeResources
+ 2587696  Defl:N  1000761  61% 03-03-2023 15:57 797033a6  Payload/HSBCOpen.app/Frameworks/Alamofire.framework/Alamofire
+     742  Defl:N      528  29% 03-03-2023 15:49 4034aeb4  Payload/HSBCOpen.app/Frameworks/Alamofire.framework/Info.plist
+   17759  Defl:N    10949  38% 03-03-2023 15:57 dc80aeb5  Payload/HSBCOpen.app/embedded.mobileprovision
+  298944  Defl:N   126290  58% 03-03-2023 15:49 25e2f35b  Payload/HSBCOpen.app/SFProDisplay-Regular.otf
+   12048  Defl:N     3197  74% 03-03-2023 15:49 576c70ad  Payload/HSBCOpen.app/LearnArticlesData.json
+    2175  Defl:N     1384  36% 03-03-2023 15:49 bb4ae104  Payload/HSBCOpen.app/Info.plist
+    1188  Defl:N      504  58% 03-03-2023 15:49 48da998d  Payload/HSBCOpen.app/QuizData.json
+       8  Defl:N        8   0% 03-03-2023 15:49 5b8a0449  Payload/HSBCOpen.app/PkgInfo
+     593  Defl:N      195  67% 03-03-2023 15:49 64ad9d38  Payload/HSBCOpen.app/ProjectsData.json
+--------          -------  ---                            -------
+34830411         28694235  18%                            43 files
